@@ -1,189 +1,227 @@
 body {
-    background-color: #e9d9e1;
-    color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .todo-wrapper {
-    background: #4aa9e5;
-    padding: 2%;
-    width: 90%;
-    margin: 20px auto;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0px 5px 7px rgb(6, 132, 228);
-    border-radius: 8px;
-  }
-  
-  .todo-input {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgb(226, 153, 153);
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-  }
-  
-  .todo-input-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 25px;
-    margin-bottom: 15px;
-  }
-  
-  .todo-input-item label {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .todo-input-item input,
-  .todo-input-item select {
-    padding: 8px;
-    border: none;
-    width: 250px;
-    border-radius: 4px;
-  }
-  
-  .todo-input-item input:focus,
-  .todo-input-item select:focus {
-    outline: 2px solid rgb(0, 230, 122);
-  }
-  
-  .primaryBtn {
-    background-color: rgb(0, 230, 122);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    margin-top: 25px;
-    padding: 10px;
-    width: 60px;
-    cursor: pointer;
-  }
-  
-  .primaryBtn:hover {
-    background-color: rgb(4, 196, 106);
-  }
-  
-  .secondaryBtn {
-    background-color: rgb(71, 71, 71);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    margin-top: 25px;
-    padding: 10px;
-    width: fit-content;
-    cursor: pointer;
-  }
-  
-  .active {
-    background-color: rgb(0, 230, 122);
-  }
-  
-  .todo-list {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .btn-area {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .todo-list-item {
-    background-color: #414040;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0px 3px 5px rgb(172, 216, 240);
-    border-radius: 4px;
-  }
-  
-  .todo-list-item h3 {
-    font-size: 25px;
-    color: rgb(0, 230, 122);
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .todo-list-item p {
-    font-size: 14px;
-    color: rgb(238, 139, 139);
-    margin-top: 8px;
-  }
-  
-  .icon {
-    font-size: 35px;
-    cursor: pointer;
-  }
-  
-  .icon:hover {
-    color: red;
-  }
-  
-  .check-icon {
-    font-size: 25px;
-    margin-left: 10px;
-    color: rgb(0, 230, 122);
-    cursor: pointer;
-  }
-  
-  .check-icon:hover {
-    color: rgb(4, 196, 106);
-  }
-  
-  .edit__wrapper {
-    background-color: #414040;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-  }
-  
-  .edit__wrapper input,
-  .edit__wrapper textarea {
-    border: 1px solid lightgray;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 4px;
-  }
-  
-  .edit__wrapper .primaryBtn {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    font-size: 16px;
-    width: fit-content;
-  }
-  
-  .search-bar {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .search-bar input {
-    padding: 8px;
-    border: none;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 4px;
-  }
-  
-  .search-bar input:focus {
-    outline: 2px solid rgb(0, 230, 122);
-  }
-  
+  background-color: #1e1e1e; /* Dark background for contrast */
+  color: #e0e0e0; /* Light text color for readability */
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Trendy and clean font */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #00f0ff; /* Electric blue */
+  text-shadow: 0 0 10px #00f0ff; /* Glowing effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+  color: #ff00d1; /* Neon pink */
+  text-shadow: 0 0 15px #ff00d1; /* Enhanced glowing effect */
+}
+
+.todo-wrapper {
+  background: linear-gradient(145deg, #2a2a2a, #3a3a3a); /* Sleek gradient */
+  padding: 2%;
+  width: 90%;
+  margin: 20px auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 15px rgba(0, 240, 255, 0.6); /* Soft glowing effect */
+  border-radius: 12px;
+  border: 2px solid #00f0ff; /* Electric blue border */
+}
+
+.todo-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.7); /* Highlight border */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00f0ff; /* Electric blue */
+}
+
+.todo-input-item input,
+.todo-input-item select {
+  padding: 10px;
+  border: none;
+  width: 250px;
+  border-radius: 8px;
+  background-color: #3a3a3a; /* Dark background for inputs */
+  color: #00f0ff; /* Electric blue text color */
+  box-shadow: 0 0 5px #00f0ff; /* Glowing effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-input-item input:focus,
+.todo-input-item select:focus {
+  outline: 2px solid #ff00d1; /* Neon pink highlight on focus */
+  background-color: #4a4a4a; /* Slightly lighter background */
+}
+
+.primaryBtn {
+  background-color: #00f0ff; /* Electric blue */
+  color: #1e1e1e; /* Dark text for contrast */
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 12px;
+  width: 100px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f0ff; /* Glowing effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #ff00d1; /* Neon pink */
+  box-shadow: 0 0 15px #ff00d1; /* Enhanced glowing effect */
+}
+
+.secondaryBtn {
+  background-color: #333; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 12px;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* Soft glowing effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+.active {
+  background-color: #00f0ff; /* Electric blue */
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-area {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.todo-list-item {
+  background-color: #2a2a2a; /* Dark item background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 240, 255, 0.4); /* Soft glow */
+  border-radius: 10px;
+  border: 1px solid #00f0ff; /* Electric blue border */
+}
+
+.todo-list-item h3 {
+  font-size: 24px;
+  color: #00f0ff; /* Electric blue */
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 0 10px #00f0ff; /* Glowing text */
+}
+
+.todo-list-item p {
+  font-size: 14px;
+  color: #ff00d1; /* Neon pink */
+  margin-top: 5px;
+}
+
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: #00f0ff; /* Electric blue */
+  text-shadow: 0 0 10px #00f0ff; /* Glowing effect */
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #ff00d1; /* Neon pink on hover */
+}
+
+.check-icon {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #00f0ff; /* Electric blue */
+  cursor: pointer;
+  text-shadow: 0 0 10px #00f0ff; /* Glowing effect */
+  transition: color 0.3s ease;
+}
+
+.check-icon:hover {
+  color: #ff00d1; /* Neon pink on hover */
+}
+
+.edit__wrapper {
+  background-color: #2a2a2a; /* Dark background */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #00f0ff; /* Electric blue border */
+}
+
+.edit__wrapper input,
+.edit__wrapper textarea {
+  border: 1px solid #444; /* Dark border */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #3a3a3a; /* Dark background */
+  color: #00f0ff; /* Electric blue text color */
+  box-shadow: 0 0 5px #00f0ff; /* Glowing effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit__wrapper .primaryBtn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 16px;
+  width: fit-content;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  background-color: #3a3a3a; /* Dark background */
+  color: #00f0ff; /* Electric blue text color */
+  box-shadow: 0 0 5px #00f0ff; /* Glowing effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: 2px solid #ff00d1; /* Neon pink highlight on focus */
+  background-color: #4a4a4a; /* Slightly lighter background */
+}

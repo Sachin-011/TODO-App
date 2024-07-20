@@ -11,7 +11,7 @@ function App() {
   const [completedTodos, setCompletedTodos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('');
-  const [categories, setCategories] = useState(['Work', 'Personal', 'Others']);
+  const [categories] = useState(['Work', 'Personal', 'Others']); // Removed setCategories
   const [currentEdit, setCurrentEdit] = useState(null);
   const [currentEditedItem, setCurrentEditedItem] = useState(null);
 
@@ -46,7 +46,7 @@ function App() {
     let h = now.getHours();
     let m = now.getMinutes();
     let s = now.getSeconds();
-    let completedOn = dd + '-' + mm + '-' + yyyy + ' at ' + h + ':' + m + ':' + s;
+    let completedOn = `${dd}-${mm}-${yyyy} at ${h}:${m}:${s}`;
 
     let filteredItem = {
       ...allTodos[index],
@@ -107,6 +107,7 @@ function App() {
     newTodo[currentEdit] = currentEditedItem;
     setTodos(newTodo);
     setCurrentEdit(null);
+    setCurrentEditedItem(null);
     localStorage.setItem('todolist', JSON.stringify(newTodo));
   };
 
